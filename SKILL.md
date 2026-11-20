@@ -1,41 +1,39 @@
 ---
-name: 3d-product-animation
-description: Create product CGI, camera moves and 3D overlays Use when the user asks for this capability in a video production, editing, social ad, or delivery task.
+name: accessibility-wcag
+description: "Implement keyboard, semantic, screen-reader and WCAG accessibility Use for related Gemini UI/UX, web development, debugging, maintenance, or coding tasks."
 ---
-# 3D Product Animation
 
-## Scope and activation
-Create product CGI, camera moves and 3D overlays. Applicable to planning-only Gemini Apps Tasks and to executable Gemini CLI workflows. Always distinguish planned actions from verified tool execution.
+# Accessibility Wcag
 
-## Required inputs
-Ask for or infer where unambiguous: source media or filenames, edit brief, target audience, duration, canvas aspect ratio, platform, language, brand reference, music/voiceover rights, and available tools. For missing source footage, propose a shot plan instead of pretending video exists.
+## When to use
+Use when the user requests implement keyboard, semantic, screen-reader and wcag accessibility. Select this skill only when it directly matches the active task; avoid loading unrelated skills.
 
-## Expert procedure
-1. **Step 1:** Confirm exact reference geometry, materials and logo assets.
-2. **Step 2:** Establish unit scale and realistic lighting.
-3. **Step 3:** Define key poses, path and focal length.
-4. **Step 4:** Render alpha layers or full scenes.
-5. **Step 5:** Composite with footage and verify physical consistency.
+## Inputs and baseline
+- Identify the repository, runtime, framework and exact versions from available files rather than assuming.
+- Obtain the brief, expected behavior, audience, design references, screenshots, pages, mobile breakpoints and deployment environment where relevant.
+- Record immutable constraints: routes/URLs, logos, labels, brand colors, API contracts, user data and existing business rules.
+- If tools/repository are inaccessible, produce a proposed implementation and clear commands without claiming that changes or tests ran.
 
-## Tools and integration
-Relevant options: Blender; Three.js; React Three Fiber; Drei. These are candidate tools **not bundled or guaranteed available**. Confirm runtime and versions before using. Prefer low-cost preview renders, non-destructive edits, reproducible timecodes, and verified paths.
+## Specialist procedure
+1. Identify applicable WCAG target and user-critical flows.
+2. Check headings, landmarks, labels, roles and name/value/state.
+3. Verify keyboard sequence, focus indicators, dialogs and errors.
+4. Audit contrast, reduced motion and alternatives.
+5. Combine automation with manual assistive-tech review.
 
-## Output contract
-Return: 3D scene brief and keyframe shot list. Always identify which elements were verified in a real render versus which are recommendations or instructions. Include timestamps where relevant and note missing or rejected assets.
+## Tool candidates
+axe-core, Lighthouse, keyboard, screen reader. Tools are suggestions only: check whether each tool, plugin, executable, authorized connection and version exists before attempting operations. Never claim to have installed or invoked unavailable tools.
 
-## Acceptance checks
-- Editorial: message, visual clarity, story, natural pacing, continuity and CTA are correct.
-- Technical: dimensions, fps, duration, sync, codec, loudness and subtitle safe regions are checked when relevant.
-- Brand: official logos, label text, product orientation and specified colors were not changed.
-- Provenance: rights and source references are traceable.
-- Risk: Product proportions and on-pack text must stay exact.
+## Verification and acceptance
+- No keyboard traps.
+- Meaningful alt and labels.
+- Automated pass does not imply WCAG compliance.
+- Validate the requested runtime with actual build, lint, typecheck, tests, browser rendering, mobile checks and production-like behavior where available.
+- Make the smallest safe changes, protect working code and keep reversible diffs. Do not delete unrelated files or overwrite originals without permission.
+- Include the precise files changed, test commands and real results. Label any untested steps or hypothetical output clearly.
 
-## Ground rules
-- Respect the user's brief and preserve all uploaded originals, brand marks and product packaging.
-- For Gemini Apps/Tasks: this skill gives reusable expert instructions; it does **not** install, run or grant access to local Windows tools. Never claim to have executed FFmpeg, Python, an MCP connector or an NLE unless an actual supported tool returned a verified result.
-- For Gemini CLI: inspect available executables and MCP servers, get consent before executing destructive or untrusted commands, write outputs only into a dedicated output directory, and test a short preview before final render.
-- If a required tool is unavailable, produce an actionable edit plan, script or command for a connected environment instead of fabricating rendered assets.
-- Check licensed media, privacy, copyright, synthetic speech permissions, and commercial model terms before delivery.
+## Delivery
+Provide a concise result summary, implementation decisions, artifact/file paths (when verified), test evidence, known limitations, and next actions. For visual tasks include responsive screenshots or an explicit screenshot plan; for code tasks include concrete reproduction and verification commands.
 
 ## Google AI Studio agent runtime addendum (20 November 2026)
 - In Google AI Studio Agents Playground / managed agents, this skill is available only when its SKILL.md (and any referenced assets) is mounted into the agent environment under `.agents/skills/`. The model should select it only for matching tasks.
